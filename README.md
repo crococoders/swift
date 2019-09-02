@@ -1,8 +1,6 @@
 # 🐊The Official Crococoders' Swift Style Guide.
 
-We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
-
-Our overarching goals are clarity, consistency and brevity, in that order.
+We created this style guide to keep the code nice and consistent 
 
 ## Table of Contents
 
