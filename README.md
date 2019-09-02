@@ -1,4 +1,4 @@
-# 🐊The Official Crococoders Swift Style Guide.
+# 🐊The Official Crococoders' Swift Style Guide.
 
 We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
 
