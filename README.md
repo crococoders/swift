@@ -1,6 +1,6 @@
 # 🐊Style guide & coding conventions for Swift projects
 
-is basically a compilation [raywenderlich](https://github.com/raywenderlich/swift-style-guide), [airbnb](https://github.com/airbnb/swift) swift style guides
+is basically a compilation [raywenderlich](https://github.com/raywenderlich/swift-style-guide), [airbnb](https://github.com/airbnb/swift) swift style guides also used the Swift naming conventions described in the [API Design Guidelines](https://swift.org/documentation/api-design-guidelines)
 
 ## Table of Contents
 
