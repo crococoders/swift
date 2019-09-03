@@ -1,6 +1,6 @@
 # 🐊Style guide & coding conventions for Swift projects
 
-is basically a compilation [raywenderlich](https://github.com/raywenderlich/swift-style-guide), [airbnb](https://github.com/airbnb/swift) swift style guides also used the Swift naming conventions described in the [API Design Guidelines](https://swift.org/documentation/api-design-guidelines)
+It's basically a compilation of [raywenderlich](https://github.com/raywenderlich/swift-style-guide), [airbnb](https://github.com/airbnb/swift) swift style guides. Also used the Swift naming conventions described in the [API Design Guidelines](https://swift.org/documentation/api-design-guidelines)
 
 ## Table of Contents
 
@@ -47,7 +47,6 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
 ## Naming
 ### General
 - Include all the words needed to avoid ambiguity for a person reading code where the name is used.
-  <details>
  
   For example, consider a method that removes the element at a given position within a collection.
   
@@ -66,11 +65,7 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   ```swift
   employees.remove(x) // unclear: are we removing x?
   ```
-  
-  </details>
 - Omit needless words.Every word in a name should convey salient information at the use site.
-  <details>
- 
   More words may be needed to clarify intent or disambiguate meaning, but those that are redundant with information the reader already possesses should be omitted. In particular, omit words that merely repeat type information.
   
   ***Not Preferred:***
@@ -87,10 +82,7 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   public mutating func remove(_ member: Element) -> Element?
   allViews.remove(cancelButton) // clearer
   ```
-  
-  </details>
 - Compensate for weak type information to clarify a parameter’s role.
-  <details>
  
   Especially when a parameter type is NSObject, Any, AnyObject, or a fundamental type such Int or String, type information and context at the point of use may not fully convey intent. In this example, the declaration may be clear, but the use site is vague.
   
@@ -109,9 +101,7 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   grid.addObserver(self, forKeyPath: graphics) // clear
   ```
   
-  </details>
 - Prefer method and function names that make use sites form grammatical English phrases.
-  <details>
   
   ***Preferred:***
   
@@ -133,11 +123,9 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   AudioUnit.instantiate(with: description, 
   options: [.inProcess], completionHandler: stopProgressBar)
   ```
-  </details>
 - Begin names of factory methods with “make”, e.g. x.makeIterator().
 
 - The first argument to initializer and factory methods calls should not form a phrase starting with the base name, e.g. x.makeWidget(cogCount: 47)
-  <details>
  
   For example, the first arguments to these calls do not read as part of the same phrase as the base name:
   
@@ -157,11 +145,8 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   let newPart = factory.makeWidget(havingGearCount: 42, andSpindleCount: 14)
   let ref = Link(to: destination)
   ```
-  
-  </details>
 - Name functions and methods according to their side-effects
 - Name Mutating/nonmutating method pairs consistently. A mutating method will often have a nonmutating variant with similar semantics, but that returns a new value rather than updating an instance in-place.
-  <details>
  
   > When the operation is naturally described by a verb, use the verb’s imperative for the mutating method and apply the “ed” or “ing” suffix to name its nonmutating counterpart.
   
@@ -187,10 +172,7 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
     x = y.union(z)
     j = c.successor(i)	
     ```
-  
-  </details>
 - When dealing with an acronym or other name that is usually written in all caps, actually use all caps in any names that use this in code. The exception is if this word is at the start of a name that needs to start with lowercase - in this case, use all lowercase for the acronym.
-  <details>
  
   For example, the first arguments to these calls do not read as part of the same phrase as the base name:
   
@@ -204,8 +186,6 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
     /* ... */
    }
   ```
-  
-  </details>
 - Include a hint about type in a name if it would otherwise be ambiguous.
   <details>
  
@@ -217,8 +197,6 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
   let titleText: String
   let cancelButton: UIButton
   ```
-  
-  </details>
 - Avoid Objective-C-style acronym prefixes.** This is no longer needed to avoid naming conflicts in Swift.
 - Uses of Boolean methods and properties should read as assertions about the receiver when the use is nonmutating, e.g. x.isEmpty, line1.intersects(line2).
 - Protocols that describe what something is should read as nouns (e.g. Collection).
@@ -241,7 +219,6 @@ is basically a compilation [raywenderlich](https://github.com/raywenderlich/swif
 - Choose good parameter names that serve as documentation
 - Prefer to name the first parameter instead of including its name in the method name, except as mentioned under
 
-**[🐊 back to top](#table-of-contents)**
 ### Prose
 
 When referring to methods in prose, being unambiguous is critical. To refer to a method name, use the simplest form possible.
@@ -256,7 +233,6 @@ For the above example using `UIGestureRecognizer`, 1 is unambiguous and preferre
 
 ![Methods in Xcode jump bar](screens/xcode-jump-bar.png)
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Delegates
 
@@ -274,7 +250,6 @@ func didSelectName(namePicker: NamePickerViewController, name: String)
 func namePickerShouldReload() -> Bool
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Use Type Inferred Context
 
@@ -296,7 +271,6 @@ let toView = context.view(forKey: UITransitionContextViewKey.to)
 let view = UIView(frame: CGRect.zero)
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Generics
 
@@ -316,7 +290,6 @@ func write<target: OutputStream>(to target: inout target)
 func swap<Thing>(_ a: inout Thing, _ b: inout Thing)
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Language
 
@@ -332,13 +305,11 @@ let color = "red"
 let colour = "red"
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Code Organization
 
 Use extensions to organize your code into logical blocks of functionality. Each extension should be set off with a `// MARK: -` comment to keep things well-organized.
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Protocol Conformance
 
@@ -372,7 +343,6 @@ Since the compiler does not allow you to re-declare protocol conformance in a de
 
 For UIKit view controllers, consider grouping lifecycle, custom accessors, and IBAction in separate class extensions.
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Unused Code
 
@@ -406,27 +376,26 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ### Minimal Imports
 
 Import only the modules a source file requires. For example, don't import `UIKit` when importing `Foundation` will suffice. Likewise, don't import `Foundation` if you must import `UIKit`.
 
 **Preferred**:
-```
+```swift
 import UIKit
 var view: UIView
 var deviceModels: [String]
 ```
 
 **Preferred**:
-```
+```swift
 import Foundation
 var deviceModels: [String]
 ```
 
 **Not Preferred**:
-```
+```swift
 import UIKit
 import Foundation
 var view: UIView
@@ -434,12 +403,11 @@ var deviceModels: [String]
 ```
 
 **Not Preferred**:
-```
+```swift
 import UIKit
 var deviceModels: [String]
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Spacing
 
@@ -496,7 +464,6 @@ class TestDatabase : Database {
 
 * Add a single newline character at the end of each file.
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Comments
 
@@ -506,7 +473,6 @@ Avoid block comments inline with code, as the code should be as self-documenting
 
 Avoid the use of C-style comments (`/* ... */`). Prefer the use of double- or triple-slash.
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Classes and Structures
 
@@ -610,8 +576,6 @@ final class Box<T> {
 }
 ```
 
-**[🐊 back to top](#table-of-contents)**
-
 ## Function Declarations
 
 Keep short function declarations on one line including the opening brace:
@@ -656,8 +620,6 @@ func updateConstraints() -> () {
 typealias CompletionHandler = (result) -> ()
 ```
 
-**[🐊 back to top](#table-of-contents)**
-
 ## Function Calls
 
 Mirror the style of function declarations at call sites. Calls that fit on a single line should be written as such:
@@ -676,7 +638,6 @@ let success = reticulateSplines(
   comment: "normalize the display")
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Closure Expressions
 
@@ -726,8 +687,6 @@ let value = numbers
   .filter {$0 > 50}
   .map {$0 + 10}
 ```
-
-**[🐊 back to top](#table-of-contents)**
 
 ## Types
 
@@ -921,8 +880,6 @@ var employees: Dictionary<Int, String>
 var faxNumber: Optional<Int>
 ```
 
-**[🐊 back to top](#table-of-contents)**
-
 ## Functions vs Methods
 
 Free functions, which aren't attached to a class or type, should be used sparingly. When possible, prefer to use a method instead of a free function. This aids in readability and discoverability.
@@ -947,7 +904,6 @@ let tuples = zip(a, b)  // feels natural as a free function (symmetry)
 let value = max(x, y, z)  // another free function that feels natural
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Memory Management
 
@@ -986,7 +942,6 @@ resource.request().onComplete { [weak self] response in
 }
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Access Control
 
@@ -1014,7 +969,6 @@ class TimeMachine {
 }
 ```
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Control Flow
 
@@ -1151,7 +1105,6 @@ if let number1 = number1 {
 
 Guard statements are required to exit in some way. Generally, this should be simple one line statement such as `return`, `throw`, `break`, `continue`, and `fatalError()`. Large code blocks should be avoided. If cleanup code is required for multiple exit points, consider using a `defer` block to avoid cleanup code duplication.
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Semicolons
 
@@ -1171,7 +1124,6 @@ let swift = "not a scripting language";
 
 **NOTE**: Swift is very different from JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
 
-**[🐊 back to top](#table-of-contents)**
 
 ## Parentheses
 
@@ -1197,8 +1149,6 @@ In larger expressions, optional parentheses can sometimes make code read more cl
 ```swift
 let playerMark = (player == current ? "X" : "O")
 ```
-
-**[🐊 back to top](#table-of-contents)**
 
 ## Multi-line String Literals
 
