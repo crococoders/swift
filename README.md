@@ -1,6 +1,6 @@
 # 🐊Style guide & coding conventions for Swift projects
 
-We created this style guide to keep the code nice and consistent 
+is basically a compilation [raywenderlich](https://github.com/raywenderlich/swift-style-guide), [airbnb](https://github.com/airbnb/swift) swift style guides
 
 ## Table of Contents
 
