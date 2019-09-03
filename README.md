@@ -1,4 +1,4 @@
-# 🐊The Official Crococoders' Swift Style Guide.
+# 🐊Style guide & coding conventions for Swift projects
 
 We created this style guide to keep the code nice and consistent 
 
